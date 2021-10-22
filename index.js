@@ -1,7 +1,7 @@
 import express from 'express';
 import 'dotenv/config';
 import mongoose from 'mongoose';
-import products from './backend/routes.js';
+import products from './server/routes.js';
 
 const server = express();
 
