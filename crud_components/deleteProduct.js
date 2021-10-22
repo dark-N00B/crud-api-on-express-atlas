@@ -1,4 +1,4 @@
-import Product from '../backend/db.js';
+import Product from '../backend/db_schema.js';
 
 
 
