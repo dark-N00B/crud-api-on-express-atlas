@@ -2,10 +2,18 @@ import Product from '../models/products.js';
 
 
 
+export const getProduct = async (req, res) => {
+    try{
+        const gotProducts = await Product.find();
+        res.status(200).json({response: "Got All Products", data: gotProducts})
+    }
+    catch(err){
+        res.status(409).json({response: "Failed to retreive data", data: [], error: err})
+    }
+}
 
 
-
-const addProduct = async (req, res) => {
+export const addProduct = async (req, res) => {
     try {
         const product_name = req.body.product_name;
         const product_description = req.body.product_description;
