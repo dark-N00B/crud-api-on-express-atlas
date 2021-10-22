@@ -1,5 +1,5 @@
 import express from 'express';
-import {addProduct, getAllProducts, getProductsByUser, getProductById, updateMovie} from '../controllers/products.js';
+import {addProduct, getAllProducts, getProductsByUser, getProductById, updateMovie, deleteProduct} from '../controllers/products.js';
 
 
 
@@ -12,6 +12,7 @@ router.get("/", getAllProducts);
 router.get("/user/:userId", getProductsByUser);
 router.get("/id/:productId", getProductById);
 router.put("/update/:productId", updateMovie);
+router.delete("/remove/:productId", deleteProduct);
 
 
 export default router;

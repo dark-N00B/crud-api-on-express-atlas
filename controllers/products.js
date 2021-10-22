@@ -83,4 +83,15 @@ export const addProduct = async (req, res) => {
     }
 }
 
+export const deleteProduct = async (req, res) => {
+    const productId = req.params.productId;
+    try{
+        await Product.remove({_id: productId});
+        res.status(200).json({response: "Product Deleted Successfully"});
+    }
+    catch{
+        res.status(409).json({response: "Failed to Delete Product", error: err});
+    }
+}
+
 export default addProduct;
