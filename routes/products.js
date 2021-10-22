@@ -1,5 +1,5 @@
 import express from 'express';
-import {addProduct, getAllProducts, getProductsByUser, getProductById} from '../controllers/products.js';
+import {addProduct, getAllProducts, getProductsByUser, getProductById, updateMovie} from '../controllers/products.js';
 
 
 
@@ -8,9 +8,10 @@ import {addProduct, getAllProducts, getProductsByUser, getProductById} from '../
 const router = express.Router();
 
 router.post("/add", addProduct);
-router.post("/", getAllProducts);
-router.post("/user/:userId", getProductsByUser);
-router.post("/id/:productId", getProductById);
+router.get("/", getAllProducts);
+router.get("/user/:userId", getProductsByUser);
+router.get("/id/:productId", getProductById);
+router.put("/update/:productId", updateMovie);
 
 
 export default router;
