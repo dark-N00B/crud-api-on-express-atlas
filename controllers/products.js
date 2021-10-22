@@ -79,7 +79,7 @@ export const addProduct = async (req, res) => {
         res.status(201).json({response: "Added Succesfully", data: savedProduct})
     }
     catch(err) {
-        res.status(409).json({success: false, data: [], error: err})
+        res.status(409).json({response: "Failed to Add", data: [], error: err})
     }
 }
 
@@ -87,10 +87,10 @@ export const deleteProduct = async (req, res) => {
     const productId = req.params.productId;
     try{
         await Product.remove({_id: productId});
-        res.status(200).json({response: "Product Deleted Successfully"});
+        res.status(200).json({response: "Successfully Delete"});
     }
     catch{
-        res.status(409).json({response: "Failed to Delete Product", error: err});
+        res.status(409).json({response: "Failed to Delete", error: err});
     }
 }
 
