@@ -32,4 +32,4 @@ npm test
 |     KEY     |              VALUE              |
 |-------------|---------------------------------|
 |DB_CONNECTION|Your MongoDB Atlas Connection URL|
-|    PORT     |     5000 (Default is 5000)      |
+|    PORT     | Your Own Port (Default is 5000) |
