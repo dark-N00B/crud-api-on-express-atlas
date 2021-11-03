@@ -11,15 +11,19 @@ eCommerce Backend to Create, Read, Update and Delete (CRUD) Products.
 ![GitHub package.json dependency version (subfolder of monorepo)](https://img.shields.io/github/package-json/dependency-version/dark-N00B/crud-api-on-express-atlas/mongoose)
 ![GitHub package.json dependency version (subfolder of monorepo)](https://img.shields.io/github/package-json/dependency-version/dark-N00B/crud-api-on-express-atlas/dotenv)
 
-To install this :-
+To install this :
 ```
 npm install
 ```
 
-To run this :-
+To run this :
 
 ```
 npm start
+```
+or to run with nodemon
+```
+npm test
 ```
 
 
@@ -28,4 +32,4 @@ npm start
 |     KEY     |              VALUE              |
 |-------------|---------------------------------|
 |DB_CONNECTION|Your MongoDB Atlas Connection URL|
-|    PORT     |               5000              |
+|    PORT     |     5000 (Default is 5000)      |

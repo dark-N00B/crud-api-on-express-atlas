@@ -15,8 +15,8 @@ export const getAllProducts = async (req, res) => {
 export const getProductById = async (req, res) => {
     const productId = req.params.productId;
     try{
-        const productsbyById = await Product.find({_id: productId});
-        res.status(200).json({response: "Got Products By Product ID", data: productsbyById});
+        const productsById = await Product.find({_id: productId});
+        res.status(200).json({response: "Got Products By Product ID", data: productsById});
     }
     catch{
         res.status(409).json({response: "Failed to retreive data", data: [], error: err});
