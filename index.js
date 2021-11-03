@@ -7,7 +7,7 @@ const server = express();
 
 // middlewares
 server.use(express.json());
-server.use(express.urlencoded({extended: false}));
+//server.use(express.urlencoded({extended: false}));
 
 server.use("/products", products);
 
@@ -16,6 +16,8 @@ mongoose.connect(process.env.DB_CONNECTION, ()=> {
     console.log("DB Connection established")
 })
 
-server.listen(5000, ()=> {
+const PORT = process.env.PORT || 5000
+
+server.listen(PORT, ()=> {
     console.log("Server running on port 5000...")
 })

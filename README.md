@@ -21,7 +21,11 @@ To run this :-
 ```
 npm start
 ```
- - Create an .env file in the base folder and it should contain :- 
-```
-DB_CONNECTION = Your MongoDB Atlas Connection URL
-```
+
+
+### Environment Variables :-
+
+|     KEY     |              VALUE              |
+|-------------|---------------------------------|
+|DB_CONNECTION|Your MongoDB Atlas Connection URL|
+|    PORT     |               5000              |
