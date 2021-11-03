@@ -1,0 +1,27 @@
+GET http://localhost:5000/products
+
+###
+
+POST http://localhost:5000/products/add
+Content-Type: application/json
+
+{
+    "product_name" : "This a new product",
+    "product_description" : "This is a product description",
+    "product_quantity": 15,
+    "user": "noob"
+}
+
+###
+
+DELETE http://localhost:5000/products/remove/6182de6004f603849ae7bd68
+
+###
+
+PATCH http://localhost:5000/products/update/6182de6004f603849ae7bd68
+Content-Type: application/json
+
+{
+    "product_name" : "This a test update",
+    "product_description" : "This is an updated description"
+}
